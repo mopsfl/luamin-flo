@@ -15,4 +15,4 @@ just a modified version of [luamin](https://github.com/mathiasbynens/luamin/issu
 
 <br><br><br>
 
-##### all changes are not 100% bug free
+> ##### All changes and fixes are not 100% tested and might break something
