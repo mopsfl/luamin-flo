@@ -1,6 +1,6 @@
 just a modified version of [luamin](https://github.com/mathiasbynens/luamin/issues/88) for my [GoofyLuaUglifier](https://github.com/mopsfl/GoofyLuaUglifier) project
 
-# things i fixed:
+# Fixes:
 
 ### INCORRECT handling of () parens [#88](https://github.com/mathiasbynens/luamin/issues/88)
 #### before
