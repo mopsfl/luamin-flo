@@ -1,4 +1,4 @@
-just a modified version of [luamin](https://github.com/mathiasbynens/luamin/issues/88)
+just a modified version of [luamin](https://github.com/mathiasbynens/luamin/issues/88) for my [GoofyLuaUglifier](https://github.com/mopsfl/GoofyLuaUglifier) project
 
 # things i fixed:
 
