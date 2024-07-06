@@ -13,4 +13,13 @@ just a modified version of [luamin](https://github.com/mathiasbynens/luamin/issu
 
 <br><br><br>
 
+### vararg table indexing or something like this
+#### before
+> ({...})[i] -> {...}[i]
+
+#### after:
+> ({...})[i] -> ({...})[i]
+
+<br><br><br>
+
 ##### all changes are not 100% bug free
