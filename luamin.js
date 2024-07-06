@@ -226,7 +226,6 @@
 		if (needsParens) {
 			result += ')';
 		}
-		//console.log(result + " | " + type + " | " + needsParens)
 		return result;
 	};
 
@@ -499,7 +498,6 @@
 				if (statement.expression.base?.type === "FunctionDeclaration") {
 					if (/\(\)$/gm.test(result)) {
 						result = result.replace(/\(\)$/gm, "")
-						console.log(result);
 						result = `(${result})()`
 					}
 				}
