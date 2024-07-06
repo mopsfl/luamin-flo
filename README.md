@@ -13,14 +13,14 @@ just a modified version of [luamin](https://github.com/mathiasbynens/luamin) for
 
 `hello=(function() return "hello" end)()` -> `a=(function()return"hello"end)()`
 
-<br><br><br>
+<br>
 
 ### vararg table indexing or something like this
 #### before
-> ({...})[i] -> {...}[i]
+`({...})[i]` -> `{...}[i]`
 
 #### after:
-> ({...})[i] -> ({...})[i]
+`({...})[i]` -> `({...})[i]`
 
 <br><br><br>
 
