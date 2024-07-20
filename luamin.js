@@ -367,8 +367,10 @@
 			result = formatBase(expression.base) + '[' +
 				formatExpression(expression.index) + ']';
 
-			if (/\{\.\.\.\}\[.+\]/gm.test(result)) { // mopsfl: fix for vararg table indexing -> `({...})[x]`   // idk if you even call it vararg table indexing but u guys know what i mean
+			/*if (/\{\.\.\.\}\[.+\]/gm.test(result)) { // mopsfl: fix for vararg table indexing -> `({...})[x]`   // idk if you even call it vararg table indexing but u guys know what i mean
 				result = result.replace(/\{\.\.\.\}/gm, "({...})")
+			} else*/ if (/^\{.*\}\[.*\]/gm.test(result)) { // mopsfl: fix for table indexing ({})[x]
+				result = result.replace(/(\{.*?\})(\[.*])/g, "($1)$2")
 			}
 		} else if (expressionType == 'MemberExpression') {
 			result = formatBase(expression.base) + expression.indexer +
@@ -418,14 +420,14 @@
 		} else if (expressionType == 'CallStatement') {
 			result = formatExpression(expression.expression)
 			// mopsfl: fix for anonymous CallStatement
-			if (expression.expression.type == "CallExpression") {
+			/*if (expression.expression.type == "CallExpression") {
 				if (expression.expression.base?.type === "FunctionDeclaration") {
 					if (/\(\)$/gm.test(result)) {
-						result = result.replace(/\(\)$/gm, "")
-						result = `(${result})()`
+						//result = result.replace(/\(\)$/gm, "")
+						//result = `(${result})()`
 					}
 				}
-			}
+			}*/
 		}
 		else {
 			throw TypeError('Unknown expression type: `' + expressionType + '`');
